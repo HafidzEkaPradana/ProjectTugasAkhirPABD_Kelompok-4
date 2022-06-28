@@ -1,7 +1,7 @@
 ﻿
 namespace TugasAkhir_PABD
 {
-    partial class Form1
+    partial class Customer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,12 @@ namespace TugasAkhir_PABD
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Menu";
-            this.ResumeLayout(false);
-
+            this.Text = "Customer";
         }
 
         #endregion
     }
 }
-
