@@ -56,5 +56,12 @@ namespace TugasAkhir_PABD
             this.Hide();
             viewCustomer.Show();
         }
+
+        private void btInfo_Click(object sender, EventArgs e)
+        {
+            InfoAdmin info = new InfoAdmin();
+            this.Hide();
+            info.Show();
+        }
     }
 }

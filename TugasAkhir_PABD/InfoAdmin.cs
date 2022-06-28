@@ -16,5 +16,19 @@ namespace TugasAkhir_PABD
         {
             InitializeComponent();
         }
+
+        private void InfoAdmin_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet.Admin' table. You can move, or remove it, as needed.
+            this.adminTableAdapter.Fill(this.projectAkhirPABDDataSet.Admin);
+            this.CenterToScreen();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuAdmin menu = new MenuAdmin();
+            this.Hide();
+            menu.Show();
+        }
     }
 }

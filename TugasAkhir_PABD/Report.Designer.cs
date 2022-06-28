@@ -57,10 +57,10 @@ namespace TugasAkhir_PABD
             reportDataSource1.Value = this.PemesananBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TugasAkhir_PABD.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(31, 25);
+            this.reportViewer1.Location = new System.Drawing.Point(79, 53);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(997, 444);
+            this.reportViewer1.Size = new System.Drawing.Size(1072, 525);
             this.reportViewer1.TabIndex = 0;
             // 
             // PemesananTableAdapter
@@ -69,7 +69,7 @@ namespace TugasAkhir_PABD
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(31, 488);
+            this.button1.Location = new System.Drawing.Point(79, 606);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 40);
             this.button1.TabIndex = 5;
@@ -82,7 +82,7 @@ namespace TugasAkhir_PABD
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1065, 553);
+            this.ClientSize = new System.Drawing.Size(1217, 685);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -31,22 +31,24 @@ namespace TugasAkhir_PABD
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.projectAkhirPABDDataSet1 = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
-            this.mobilBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mobilTableAdapter2 = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mobilBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectAkhirPABDDataSet1 = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mobilTableAdapter2 = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -58,10 +60,66 @@ namespace TugasAkhir_PABD
             this.dataGridView1.DataSource = this.mobilBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(41, 44);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(975, 241);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idMobil";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idMobil";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NamaMobil";
+            this.dataGridViewTextBoxColumn2.HeaderText = "NamaMobil";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PlatNo";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PlatNo";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "jenisMobil";
+            this.dataGridViewTextBoxColumn4.HeaderText = "jenisMobil";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Merk";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Merk";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // mobilBindingSource
+            // 
+            this.mobilBindingSource.DataMember = "Mobil";
+            this.mobilBindingSource.DataSource = this.projectAkhirPABDDataSet1;
+            // 
+            // projectAkhirPABDDataSet1
+            // 
+            this.projectAkhirPABDDataSet1.DataSetName = "ProjectAkhirPABDDataSet";
+            this.projectAkhirPABDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -73,59 +131,9 @@ namespace TugasAkhir_PABD
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // projectAkhirPABDDataSet1
-            // 
-            this.projectAkhirPABDDataSet1.DataSetName = "ProjectAkhirPABDDataSet";
-            this.projectAkhirPABDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mobilBindingSource
-            // 
-            this.mobilBindingSource.DataMember = "Mobil";
-            this.mobilBindingSource.DataSource = this.projectAkhirPABDDataSet1;
-            // 
             // mobilTableAdapter2
             // 
             this.mobilTableAdapter2.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idMobil";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idMobil";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NamaMobil";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NamaMobil";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PlatNo";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PlatNo";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "jenisMobil";
-            this.dataGridViewTextBoxColumn4.HeaderText = "jenisMobil";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Merk";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Merk";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // ViewMobil
             // 
@@ -138,8 +146,8 @@ namespace TugasAkhir_PABD
             this.Text = "ViewMobil";
             this.Load += new System.EventHandler(this.ViewMobil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

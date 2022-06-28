@@ -88,6 +88,7 @@ namespace TugasAkhir_PABD
             this.btInfo.TabIndex = 8;
             this.btInfo.Text = "Info Admin";
             this.btInfo.UseVisualStyleBackColor = true;
+            this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
             // 
             // pictureBox1
             // 
