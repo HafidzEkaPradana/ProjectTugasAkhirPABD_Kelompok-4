@@ -52,21 +52,21 @@ namespace TugasAkhir_PABD
             this.txAlamat = new System.Windows.Forms.TextBox();
             this.txTujuan = new System.Windows.Forms.TextBox();
             this.txJumlah = new System.Windows.Forms.TextBox();
-            this.txNoTelpon = new System.Windows.Forms.TextBox();
             this.idMobil = new System.Windows.Forms.TextBox();
             this.dtTanggal = new System.Windows.Forms.DateTimePicker();
             this.btPesan = new System.Windows.Forms.Button();
             this.cbJam = new System.Windows.Forms.ComboBox();
+            this.cbHarga = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbHarga);
             this.groupBox1.Controls.Add(this.cbJam);
             this.groupBox1.Controls.Add(this.btPesan);
             this.groupBox1.Controls.Add(this.dtTanggal);
             this.groupBox1.Controls.Add(this.idMobil);
-            this.groupBox1.Controls.Add(this.txNoTelpon);
             this.groupBox1.Controls.Add(this.txJumlah);
             this.groupBox1.Controls.Add(this.txTujuan);
             this.groupBox1.Controls.Add(this.txAlamat);
@@ -285,13 +285,6 @@ namespace TugasAkhir_PABD
             this.txJumlah.Size = new System.Drawing.Size(279, 26);
             this.txJumlah.TabIndex = 37;
             // 
-            // txNoTelpon
-            // 
-            this.txNoTelpon.Location = new System.Drawing.Point(210, 317);
-            this.txNoTelpon.Name = "txNoTelpon";
-            this.txNoTelpon.Size = new System.Drawing.Size(279, 26);
-            this.txNoTelpon.TabIndex = 39;
-            // 
             // idMobil
             // 
             this.idMobil.Location = new System.Drawing.Point(210, 368);
@@ -323,6 +316,14 @@ namespace TugasAkhir_PABD
             this.cbJam.Name = "cbJam";
             this.cbJam.Size = new System.Drawing.Size(279, 28);
             this.cbJam.TabIndex = 43;
+            // 
+            // cbHarga
+            // 
+            this.cbHarga.FormattingEnabled = true;
+            this.cbHarga.Location = new System.Drawing.Point(210, 317);
+            this.cbHarga.Name = "cbHarga";
+            this.cbHarga.Size = new System.Drawing.Size(279, 28);
+            this.cbHarga.TabIndex = 44;
             // 
             // Pemesanan
             // 
@@ -362,7 +363,6 @@ namespace TugasAkhir_PABD
         public System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox idMobil;
-        private System.Windows.Forms.TextBox txNoTelpon;
         private System.Windows.Forms.TextBox txJumlah;
         private System.Windows.Forms.TextBox txTujuan;
         private System.Windows.Forms.TextBox txAlamat;
@@ -370,5 +370,6 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.DateTimePicker dtTanggal;
         private System.Windows.Forms.Button btPesan;
         private System.Windows.Forms.ComboBox cbJam;
+        private System.Windows.Forms.ComboBox cbHarga;
     }
 }

@@ -35,5 +35,12 @@ namespace TugasAkhir_PABD
             this.Hide();
             report.Show();
         }
+
+        private void btPesan_Click(object sender, EventArgs e)
+        {
+            ViewPemesananAdmin view = new ViewPemesananAdmin();
+            this.Hide();
+            view.Show();
+        }
     }
 }

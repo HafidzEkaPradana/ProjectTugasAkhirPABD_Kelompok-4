@@ -14,6 +14,8 @@ namespace TugasAkhir_PABD
     public partial class LoginAdmin : Form
     {
         SqlConnection conn = new SqlConnection("data source=LAPTOP-8MKEQ456; database=ProjectAkhirPABD; Integrated Security=True; User ID=sa;Password=mentepermaib20");
+        DataTable dt;
+        DataRow dr;
         public LoginAdmin()
         {
             InitializeComponent();
@@ -28,18 +30,28 @@ namespace TugasAkhir_PABD
 
         private void LoginAdmin_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet.Admin' table. You can move, or remove it, as needed.
+            this.adminTableAdapter.Fill(this.projectAkhirPABDDataSet.Admin);
             this.CenterToScreen();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            
             try
-            {
+            {/*
                 String emailMasuk = "eka@gmail.com";
-                String passMasuk = "pradana";
+                String passMasuk = "pradana";*/
 
-                if(txEmail.Text == emailMasuk && txPassword.Text == passMasuk)
+                conn.Open();
+                String query = "SELECT * FROM Login WHERE username = '" + txEmail.Text + "' AND password = '" + txPassword.Text + "'";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+
+
+                dataAdapter.Fill(dt);
+
+
+                if (dt.Rows.Count == 4 && dt.Rows.Count == 3)
                 {
                     MenuAdmin mAdmin = new MenuAdmin();
                     this.Hide();
@@ -60,11 +72,11 @@ namespace TugasAkhir_PABD
             }
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Email dan Password tidak ditemukan !!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                
+                conn.Close();
             }
         }
     }

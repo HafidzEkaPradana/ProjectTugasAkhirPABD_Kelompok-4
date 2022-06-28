@@ -139,6 +139,12 @@
       <DependentUpon>ViewPemesanan.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewPemesananAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPemesananAdmin.Designer.cs">
+      <DependentUpon>ViewPemesananAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DataCustomer.resx">
       <DependentUpon>DataCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewPemesanan.resx">
       <DependentUpon>ViewPemesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPemesananAdmin.resx">
+      <DependentUpon>ViewPemesananAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="ProjectAkhirPABDDataSet.xsc">

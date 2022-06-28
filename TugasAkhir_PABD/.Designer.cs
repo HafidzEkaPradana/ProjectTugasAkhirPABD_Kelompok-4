@@ -118,7 +118,7 @@ namespace TugasAkhir_PABD
             this.groupBox1.Size = new System.Drawing.Size(566, 427);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesan Mobil";
+            this.groupBox1.Text = "Data Pemesanan";
             // 
             // labelIDMobil
             // 
@@ -368,6 +368,7 @@ namespace TugasAkhir_PABD
             this.button2.TabIndex = 7;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // bindingNavigator1
             // 

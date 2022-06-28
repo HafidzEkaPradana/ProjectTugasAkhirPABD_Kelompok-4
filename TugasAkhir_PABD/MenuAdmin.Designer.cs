@@ -76,6 +76,7 @@ namespace TugasAkhir_PABD
             this.btPesan.TabIndex = 7;
             this.btPesan.Text = "Data Pemesanan";
             this.btPesan.UseVisualStyleBackColor = true;
+            this.btPesan.Click += new System.EventHandler(this.btPesan_Click);
             // 
             // btInfo
             // 

@@ -23,5 +23,12 @@ namespace TugasAkhir_PABD
             this.pemesananTableAdapter.Fill(this.projectAkhirPABDDataSet.Pemesanan);
             this.CenterToScreen();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Customer cust = new Customer();
+            this.Hide();
+            cust.Show();
+        }
     }
 }

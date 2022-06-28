@@ -29,6 +29,7 @@ namespace TugasAkhir_PABD
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             this.button1 = new System.Windows.Forms.Button();
             this.txEmail = new System.Windows.Forms.TextBox();
@@ -37,7 +38,12 @@ namespace TugasAkhir_PABD
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.projectAkhirPABDDataSet = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adminTableAdapter = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.AdminTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -103,6 +109,20 @@ namespace TugasAkhir_PABD
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // projectAkhirPABDDataSet
+            // 
+            this.projectAkhirPABDDataSet.DataSetName = "ProjectAkhirPABDDataSet";
+            this.projectAkhirPABDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // adminBindingSource
+            // 
+            this.adminBindingSource.DataMember = "Admin";
+            this.adminBindingSource.DataSource = this.projectAkhirPABDDataSet;
+            // 
+            // adminTableAdapter
+            // 
+            this.adminTableAdapter.ClearBeforeFill = true;
+            // 
             // LoginAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -120,6 +140,8 @@ namespace TugasAkhir_PABD
             this.Text = "LoginAdmin";
             this.Load += new System.EventHandler(this.LoginAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +156,8 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ProjectAkhirPABDDataSet projectAkhirPABDDataSet;
+        private System.Windows.Forms.BindingSource adminBindingSource;
+        private ProjectAkhirPABDDataSetTableAdapters.AdminTableAdapter adminTableAdapter;
     }
 }
