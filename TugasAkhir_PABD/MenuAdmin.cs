@@ -42,5 +42,12 @@ namespace TugasAkhir_PABD
             this.Hide();
             view.Show();
         }
+
+        private void btMobil_Click(object sender, EventArgs e)
+        {
+            ViewMobilAdmin view = new ViewMobilAdmin();
+            this.Hide();
+            view.Show();
+        }
     }
 }

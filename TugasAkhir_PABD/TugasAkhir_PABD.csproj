@@ -70,17 +70,28 @@
     <Compile Include="DataCustomer.Designer.cs">
       <DependentUpon>DataCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAdmin.Designer.cs">
+      <DependentUpon>InfoAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoRek.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InfoRek.Designer.cs">
       <DependentUpon>InfoRek.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mobil.cs">
+    <Compile Include="ProjectAkhirPABDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectAkhirPABDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMobilAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mobil.Designer.cs">
-      <DependentUpon>Mobil.cs</DependentUpon>
+    <Compile Include="ViewMobilAdmin.Designer.cs">
+      <DependentUpon>ViewMobilAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -113,11 +124,6 @@
       <DependentUpon>Pemesanan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProjectAkhirPABDDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectAkhirPABDDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs">
       <SubType>Form</SubType>
@@ -151,8 +157,8 @@
     <EmbeddedResource Include="InfoRek.resx">
       <DependentUpon>InfoRek.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mobil.resx">
-      <DependentUpon>Mobil.cs</DependentUpon>
+    <EmbeddedResource Include="ViewMobilAdmin.resx">
+      <DependentUpon>ViewMobilAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
@@ -232,5 +238,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

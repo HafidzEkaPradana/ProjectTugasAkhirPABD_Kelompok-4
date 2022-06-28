@@ -38,11 +38,8 @@ namespace TugasAkhir_PABD
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.projectAkhirPABDDataSet = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
             this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adminTableAdapter = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.AdminTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,23 +102,13 @@ namespace TugasAkhir_PABD
             this.pictureBox1.Location = new System.Drawing.Point(37, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(381, 279);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // projectAkhirPABDDataSet
-            // 
-            this.projectAkhirPABDDataSet.DataSetName = "ProjectAkhirPABDDataSet";
-            this.projectAkhirPABDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // adminBindingSource
             // 
             this.adminBindingSource.DataMember = "Admin";
-            this.adminBindingSource.DataSource = this.projectAkhirPABDDataSet;
-            // 
-            // adminTableAdapter
-            // 
-            this.adminTableAdapter.ClearBeforeFill = true;
             // 
             // LoginAdmin
             // 
@@ -140,7 +127,6 @@ namespace TugasAkhir_PABD
             this.Text = "LoginAdmin";
             this.Load += new System.EventHandler(this.LoginAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

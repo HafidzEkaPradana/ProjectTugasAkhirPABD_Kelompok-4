@@ -19,8 +19,8 @@ namespace TugasAkhir_PABD
 
         private void ViewMobil_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet.Mobil' table. You can move, or remove it, as needed.
-            this.mobilTableAdapter.Fill(this.projectAkhirPABDDataSet.Mobil);
+            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet1.Mobil' table. You can move, or remove it, as needed.
+            this.mobilTableAdapter2.Fill(this.projectAkhirPABDDataSet1.Mobil);
             this.CenterToScreen();
 
         }

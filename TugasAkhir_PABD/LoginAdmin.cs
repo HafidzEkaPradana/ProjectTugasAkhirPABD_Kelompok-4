@@ -30,8 +30,8 @@ namespace TugasAkhir_PABD
 
         private void LoginAdmin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet.Admin' table. You can move, or remove it, as needed.
-            this.adminTableAdapter.Fill(this.projectAkhirPABDDataSet.Admin);
+            txEmail.Clear();
+            txPassword.Clear();
             this.CenterToScreen();
         }
 
@@ -39,19 +39,14 @@ namespace TugasAkhir_PABD
         {
             
             try
-            {/*
+            {
                 String emailMasuk = "eka@gmail.com";
-                String passMasuk = "pradana";*/
-
-                conn.Open();
-                String query = "SELECT * FROM Login WHERE username = '" + txEmail.Text + "' AND password = '" + txPassword.Text + "'";
+                String passMasuk = "pradana";
+                /*conn.Open();
+                String query = "SELECT * FROM Admin WHERE email = '" + txEmail.Text + "' AND password = '" + txPassword.Text + "'";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
-
-
-                dataAdapter.Fill(dt);
-
-
-                if (dt.Rows.Count == 4 && dt.Rows.Count == 3)
+                dataAdapter.Fill(dt);*/
+                if ( txEmail.Text == emailMasuk && txPassword.Text == passMasuk)
                 {
                     MenuAdmin mAdmin = new MenuAdmin();
                     this.Hide();

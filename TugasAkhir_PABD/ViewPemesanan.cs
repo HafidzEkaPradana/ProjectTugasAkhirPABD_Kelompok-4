@@ -20,7 +20,7 @@ namespace TugasAkhir_PABD
         private void ViewPemesanan_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectAkhirPABDDataSet.Pemesanan' table. You can move, or remove it, as needed.
-            this.pemesananTableAdapter.Fill(this.projectAkhirPABDDataSet.Pemesanan);
+            this.pemesananTableAdapter1.Fill(this.projectAkhirPABDDataSet.Pemesanan);
             this.CenterToScreen();
         }
 

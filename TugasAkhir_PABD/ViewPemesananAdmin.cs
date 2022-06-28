@@ -21,12 +21,10 @@ namespace TugasAkhir_PABD
 
         private void ViewPemesananAdmin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet.Pemesanan' table. You can move, or remove it, as needed.
-            this.pemesananTableAdapter.Fill(this.projectAkhirPABDDataSet.Pemesanan);
+            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet1.Pemesanan' table. You can move, or remove it, as needed.
+            this.pemesananTableAdapter1.Fill(this.projectAkhirPABDDataSet1.Pemesanan);
             this.CenterToScreen();
             btPesan.Enabled = false;
-            idPesan.Enabled = false;
-            idMobil.Enabled = false;
 
             cbJam.Items.Add("08.00");
             cbJam.Items.Add("13.00");
@@ -41,7 +39,7 @@ namespace TugasAkhir_PABD
 
         private void btPesan_Click(object sender, EventArgs e)
         {
-            dt = projectAkhirPABDDataSet.Tables["Pemesanan"];
+            dt = projectAkhirPABDDataSet1.Tables["Pemesanan"];
             dr = dt.NewRow();
 
             dr[0] = idPesan.Text;
@@ -52,13 +50,14 @@ namespace TugasAkhir_PABD
             dr[5] = dtTanggal.Text;
             dr[6] = cbJam.Text;
             dr[7] = idMobil.Text;
+            dr[8] = textBox1.Text;
 
             dt.Rows.Add(dr);
-            pemesananTableAdapter.Update(projectAkhirPABDDataSet);
+            pemesananTableAdapter1.Update(projectAkhirPABDDataSet1);
             idPesan.Text = System.Convert.ToString(dr[0]);
             idMobil.Text = System.Convert.ToString(dr[7]);
 
-            this.pemesananTableAdapter.Fill(this.projectAkhirPABDDataSet.Pemesanan);
+            this.pemesananTableAdapter1.Fill(this.projectAkhirPABDDataSet1.Pemesanan);
             btPesan.Enabled = false;
 
 

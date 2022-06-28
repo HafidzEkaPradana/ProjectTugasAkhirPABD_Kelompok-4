@@ -57,11 +57,19 @@ namespace TugasAkhir_PABD
             this.btPesan = new System.Windows.Forms.Button();
             this.cbJam = new System.Windows.Forms.ComboBox();
             this.cbHarga = new System.Windows.Forms.ComboBox();
+            this.txNotelp = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.txNotelp);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.cbHarga);
             this.groupBox1.Controls.Add(this.cbJam);
             this.groupBox1.Controls.Add(this.btPesan);
@@ -87,9 +95,9 @@ namespace TugasAkhir_PABD
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(35, 29);
+            this.groupBox1.Location = new System.Drawing.Point(35, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(730, 460);
+            this.groupBox1.Size = new System.Drawing.Size(730, 554);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesan Mobil";
@@ -192,7 +200,7 @@ namespace TugasAkhir_PABD
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(35, 514);
+            this.button1.Location = new System.Drawing.Point(35, 585);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 4;
@@ -301,11 +309,11 @@ namespace TugasAkhir_PABD
             // 
             // btPesan
             // 
-            this.btPesan.Location = new System.Drawing.Point(210, 416);
+            this.btPesan.Location = new System.Drawing.Point(210, 466);
             this.btPesan.Name = "btPesan";
             this.btPesan.Size = new System.Drawing.Size(279, 38);
             this.btPesan.TabIndex = 42;
-            this.btPesan.Text = "Pesan";
+            this.btPesan.Text = "Lanjut ke Data Customer";
             this.btPesan.UseVisualStyleBackColor = true;
             this.btPesan.Click += new System.EventHandler(this.btPesan_Click);
             // 
@@ -325,11 +333,46 @@ namespace TugasAkhir_PABD
             this.cbHarga.Size = new System.Drawing.Size(279, 28);
             this.cbHarga.TabIndex = 44;
             // 
+            // txNotelp
+            // 
+            this.txNotelp.Location = new System.Drawing.Point(210, 418);
+            this.txNotelp.Name = "txNotelp";
+            this.txNotelp.Size = new System.Drawing.Size(279, 26);
+            this.txNotelp.TabIndex = 47;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(178, 421);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 20);
+            this.label12.TabIndex = 46;
+            this.label12.Text = ":";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(31, 421);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "No Telpon";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(31, 518);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(496, 20);
+            this.label19.TabIndex = 48;
+            this.label19.Text = "*Harap isi data dengan benar karena setelah lanjut tidak bisa kembali";
+            // 
             // Pemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 583);
+            this.ClientSize = new System.Drawing.Size(800, 653);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -371,5 +414,9 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.Button btPesan;
         private System.Windows.Forms.ComboBox cbJam;
         private System.Windows.Forms.ComboBox cbHarga;
+        private System.Windows.Forms.TextBox txNotelp;
+        public System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }

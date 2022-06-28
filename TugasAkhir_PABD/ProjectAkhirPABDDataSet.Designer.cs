@@ -32,8 +32,6 @@ namespace TugasAkhir_PABD {
         
         private PemesananDataTable tablePemesanan;
         
-        private global::System.Data.DataRelation relationFK__Pemesanan__idMob__2A4B4B5E;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -268,7 +266,6 @@ namespace TugasAkhir_PABD {
                     this.tablePemesanan.InitVars();
                 }
             }
-            this.relationFK__Pemesanan__idMob__2A4B4B5E = this.Relations["FK__Pemesanan__idMob__2A4B4B5E"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -287,10 +284,6 @@ namespace TugasAkhir_PABD {
             base.Tables.Add(this.tableMobil);
             this.tablePemesanan = new PemesananDataTable();
             base.Tables.Add(this.tablePemesanan);
-            this.relationFK__Pemesanan__idMob__2A4B4B5E = new global::System.Data.DataRelation("FK__Pemesanan__idMob__2A4B4B5E", new global::System.Data.DataColumn[] {
-                        this.tableMobil.idMobilColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePemesanan.idMobilColumn}, false);
-            this.Relations.Add(this.relationFK__Pemesanan__idMob__2A4B4B5E);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -395,9 +388,9 @@ namespace TugasAkhir_PABD {
             
             private global::System.Data.DataColumn columnnamaadmin;
             
-            private global::System.Data.DataColumn columnpassword;
-            
             private global::System.Data.DataColumn columnemail;
+            
+            private global::System.Data.DataColumn columnpassword;
             
             private global::System.Data.DataColumn columnnotelp;
             
@@ -452,17 +445,17 @@ namespace TugasAkhir_PABD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn passwordColumn {
+            public global::System.Data.DataColumn emailColumn {
                 get {
-                    return this.columnpassword;
+                    return this.columnemail;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn emailColumn {
+            public global::System.Data.DataColumn passwordColumn {
                 get {
-                    return this.columnemail;
+                    return this.columnpassword;
                 }
             }
             
@@ -511,13 +504,13 @@ namespace TugasAkhir_PABD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AdminRow AddAdminRow(int id_admin, string namaadmin, string password, string email, string notelp) {
+            public AdminRow AddAdminRow(int id_admin, string namaadmin, string email, string password, string notelp) {
                 AdminRow rowAdminRow = ((AdminRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_admin,
                         namaadmin,
-                        password,
                         email,
+                        password,
                         notelp};
                 rowAdminRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAdminRow);
@@ -543,8 +536,8 @@ namespace TugasAkhir_PABD {
             internal void InitVars() {
                 this.columnid_admin = base.Columns["id_admin"];
                 this.columnnamaadmin = base.Columns["namaadmin"];
-                this.columnpassword = base.Columns["password"];
                 this.columnemail = base.Columns["email"];
+                this.columnpassword = base.Columns["password"];
                 this.columnnotelp = base.Columns["notelp"];
             }
             
@@ -555,19 +548,19 @@ namespace TugasAkhir_PABD {
                 base.Columns.Add(this.columnid_admin);
                 this.columnnamaadmin = new global::System.Data.DataColumn("namaadmin", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnamaadmin);
-                this.columnpassword = new global::System.Data.DataColumn("password", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpassword);
                 this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemail);
+                this.columnpassword = new global::System.Data.DataColumn("password", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpassword);
                 this.columnnotelp = new global::System.Data.DataColumn("notelp", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnotelp);
                 this.columnid_admin.AllowDBNull = false;
                 this.columnnamaadmin.AllowDBNull = false;
                 this.columnnamaadmin.MaxLength = 30;
-                this.columnpassword.AllowDBNull = false;
-                this.columnpassword.MaxLength = 20;
                 this.columnemail.AllowDBNull = false;
                 this.columnemail.MaxLength = 50;
+                this.columnpassword.AllowDBNull = false;
+                this.columnpassword.MaxLength = 20;
                 this.columnnotelp.MaxLength = 14;
             }
             
@@ -1354,6 +1347,8 @@ namespace TugasAkhir_PABD {
             
             private global::System.Data.DataColumn columnidMobil;
             
+            private global::System.Data.DataColumn columnnoTelp;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PemesananDataTable() {
@@ -1453,6 +1448,14 @@ namespace TugasAkhir_PABD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn noTelpColumn {
+                get {
+                    return this.columnnoTelp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1488,7 +1491,7 @@ namespace TugasAkhir_PABD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PemesananRow AddPemesananRow(int idPesan, string alamatTujuan, string alamatJemput, string jumlahOrang, int harga, System.DateTime tanggal, string jam, MobilRow parentMobilRowByFK__Pemesanan__idMob__2A4B4B5E) {
+            public PemesananRow AddPemesananRow(int idPesan, string alamatTujuan, string alamatJemput, string jumlahOrang, int harga, System.DateTime tanggal, string jam, int idMobil, string noTelp) {
                 PemesananRow rowPemesananRow = ((PemesananRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idPesan,
@@ -1498,10 +1501,8 @@ namespace TugasAkhir_PABD {
                         harga,
                         tanggal,
                         jam,
-                        null};
-                if ((parentMobilRowByFK__Pemesanan__idMob__2A4B4B5E != null)) {
-                    columnValuesArray[7] = parentMobilRowByFK__Pemesanan__idMob__2A4B4B5E[0];
-                }
+                        idMobil,
+                        noTelp};
                 rowPemesananRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPemesananRow);
                 return rowPemesananRow;
@@ -1539,6 +1540,7 @@ namespace TugasAkhir_PABD {
                 this.columntanggal = base.Columns["tanggal"];
                 this.columnjam = base.Columns["jam"];
                 this.columnidMobil = base.Columns["idMobil"];
+                this.columnnoTelp = base.Columns["noTelp"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1560,14 +1562,24 @@ namespace TugasAkhir_PABD {
                 base.Columns.Add(this.columnjam);
                 this.columnidMobil = new global::System.Data.DataColumn("idMobil", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidMobil);
+                this.columnnoTelp = new global::System.Data.DataColumn("noTelp", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnoTelp);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidPesan}, true));
                 this.columnidPesan.AllowDBNull = false;
                 this.columnidPesan.Unique = true;
+                this.columnalamatTujuan.AllowDBNull = false;
                 this.columnalamatTujuan.MaxLength = 150;
+                this.columnalamatJemput.AllowDBNull = false;
                 this.columnalamatJemput.MaxLength = 150;
+                this.columnjumlahOrang.AllowDBNull = false;
                 this.columnjumlahOrang.MaxLength = 1;
+                this.columnharga.AllowDBNull = false;
+                this.columntanggal.AllowDBNull = false;
+                this.columnjam.AllowDBNull = false;
                 this.columnjam.MaxLength = 6;
+                this.columnnoTelp.AllowDBNull = false;
+                this.columnnoTelp.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1732,23 +1744,23 @@ namespace TugasAkhir_PABD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string password {
-                get {
-                    return ((string)(this[this.tableAdmin.passwordColumn]));
-                }
-                set {
-                    this[this.tableAdmin.passwordColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string email {
                 get {
                     return ((string)(this[this.tableAdmin.emailColumn]));
                 }
                 set {
                     this[this.tableAdmin.emailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string password {
+                get {
+                    return ((string)(this[this.tableAdmin.passwordColumn]));
+                }
+                set {
+                    this[this.tableAdmin.passwordColumn] = value;
                 }
             }
             
@@ -2055,17 +2067,6 @@ namespace TugasAkhir_PABD {
             public void SetMerkNull() {
                 this[this.tableMobil.MerkColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PemesananRow[] GetPemesananRows() {
-                if ((this.Table.ChildRelations["FK__Pemesanan__idMob__2A4B4B5E"] == null)) {
-                    return new PemesananRow[0];
-                }
-                else {
-                    return ((PemesananRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Pemesanan__idMob__2A4B4B5E"])));
-                }
-            }
         }
         
         /// <summary>
@@ -2097,12 +2098,7 @@ namespace TugasAkhir_PABD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string alamatTujuan {
                 get {
-                    try {
-                        return ((string)(this[this.tablePemesanan.alamatTujuanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'alamatTujuan\' in table \'Pemesanan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tablePemesanan.alamatTujuanColumn]));
                 }
                 set {
                     this[this.tablePemesanan.alamatTujuanColumn] = value;
@@ -2113,12 +2109,7 @@ namespace TugasAkhir_PABD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string alamatJemput {
                 get {
-                    try {
-                        return ((string)(this[this.tablePemesanan.alamatJemputColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'alamatJemput\' in table \'Pemesanan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tablePemesanan.alamatJemputColumn]));
                 }
                 set {
                     this[this.tablePemesanan.alamatJemputColumn] = value;
@@ -2129,12 +2120,7 @@ namespace TugasAkhir_PABD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string jumlahOrang {
                 get {
-                    try {
-                        return ((string)(this[this.tablePemesanan.jumlahOrangColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'jumlahOrang\' in table \'Pemesanan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tablePemesanan.jumlahOrangColumn]));
                 }
                 set {
                     this[this.tablePemesanan.jumlahOrangColumn] = value;
@@ -2145,12 +2131,7 @@ namespace TugasAkhir_PABD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int harga {
                 get {
-                    try {
-                        return ((int)(this[this.tablePemesanan.hargaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'harga\' in table \'Pemesanan\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tablePemesanan.hargaColumn]));
                 }
                 set {
                     this[this.tablePemesanan.hargaColumn] = value;
@@ -2161,12 +2142,7 @@ namespace TugasAkhir_PABD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime tanggal {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePemesanan.tanggalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tanggal\' in table \'Pemesanan\' is DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tablePemesanan.tanggalColumn]));
                 }
                 set {
                     this[this.tablePemesanan.tanggalColumn] = value;
@@ -2177,12 +2153,7 @@ namespace TugasAkhir_PABD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string jam {
                 get {
-                    try {
-                        return ((string)(this[this.tablePemesanan.jamColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'jam\' in table \'Pemesanan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tablePemesanan.jamColumn]));
                 }
                 set {
                     this[this.tablePemesanan.jamColumn] = value;
@@ -2207,85 +2178,13 @@ namespace TugasAkhir_PABD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MobilRow MobilRow {
+            public string noTelp {
                 get {
-                    return ((MobilRow)(this.GetParentRow(this.Table.ParentRelations["FK__Pemesanan__idMob__2A4B4B5E"])));
+                    return ((string)(this[this.tablePemesanan.noTelpColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Pemesanan__idMob__2A4B4B5E"]);
+                    this[this.tablePemesanan.noTelpColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsalamatTujuanNull() {
-                return this.IsNull(this.tablePemesanan.alamatTujuanColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetalamatTujuanNull() {
-                this[this.tablePemesanan.alamatTujuanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsalamatJemputNull() {
-                return this.IsNull(this.tablePemesanan.alamatJemputColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetalamatJemputNull() {
-                this[this.tablePemesanan.alamatJemputColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsjumlahOrangNull() {
-                return this.IsNull(this.tablePemesanan.jumlahOrangColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetjumlahOrangNull() {
-                this[this.tablePemesanan.jumlahOrangColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IshargaNull() {
-                return this.IsNull(this.tablePemesanan.hargaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SethargaNull() {
-                this[this.tablePemesanan.hargaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IstanggalNull() {
-                return this.IsNull(this.tablePemesanan.tanggalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SettanggalNull() {
-                this[this.tablePemesanan.tanggalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsjamNull() {
-                return this.IsNull(this.tablePemesanan.jamColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetjamNull() {
-                this[this.tablePemesanan.jamColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2564,19 +2463,19 @@ namespace TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters {
             tableMapping.DataSetTable = "Admin";
             tableMapping.ColumnMappings.Add("id_admin", "id_admin");
             tableMapping.ColumnMappings.Add("namaadmin", "namaadmin");
-            tableMapping.ColumnMappings.Add("password", "password");
             tableMapping.ColumnMappings.Add("email", "email");
+            tableMapping.ColumnMappings.Add("password", "password");
             tableMapping.ColumnMappings.Add("notelp", "notelp");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Admin] ([id_admin], [namaadmin], [password], [email], [notelp]" +
-                ") VALUES (@id_admin, @namaadmin, @password, @email, @notelp)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Admin] ([id_admin], [namaadmin], [email], [password], [notelp]" +
+                ") VALUES (@id_admin, @namaadmin, @email, @password, @notelp)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_admin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_admin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@namaadmin", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "namaadmin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@notelp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "notelp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2593,7 +2492,7 @@ namespace TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_admin, namaadmin, password, email, notelp FROM dbo.Admin";
+            this._commandCollection[0].CommandText = "SELECT id_admin, namaadmin, email, password, notelp FROM dbo.Admin";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2654,7 +2553,7 @@ namespace TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_admin, string namaadmin, string password, string email, string notelp) {
+        public virtual int Insert(int id_admin, string namaadmin, string email, string password, string notelp) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_admin));
             if ((namaadmin == null)) {
                 throw new global::System.ArgumentNullException("namaadmin");
@@ -2662,17 +2561,17 @@ namespace TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(namaadmin));
             }
-            if ((password == null)) {
-                throw new global::System.ArgumentNullException("password");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(password));
-            }
             if ((email == null)) {
                 throw new global::System.ArgumentNullException("email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(email));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(email));
+            }
+            if ((password == null)) {
+                throw new global::System.ArgumentNullException("password");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(password));
             }
             if ((notelp == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -3686,30 +3585,26 @@ SELECT idMobil, NamaMobil, PlatNo, jenisMobil, Merk FROM Mobil WHERE (idMobil = 
             tableMapping.ColumnMappings.Add("tanggal", "tanggal");
             tableMapping.ColumnMappings.Add("jam", "jam");
             tableMapping.ColumnMappings.Add("idMobil", "idMobil");
+            tableMapping.ColumnMappings.Add("noTelp", "noTelp");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Pemesanan] WHERE (([idPesan] = @Original_idPesan) AND ((@IsNull_alamatTujuan = 1 AND [alamatTujuan] IS NULL) OR ([alamatTujuan] = @Original_alamatTujuan)) AND ((@IsNull_alamatJemput = 1 AND [alamatJemput] IS NULL) OR ([alamatJemput] = @Original_alamatJemput)) AND ((@IsNull_jumlahOrang = 1 AND [jumlahOrang] IS NULL) OR ([jumlahOrang] = @Original_jumlahOrang)) AND ((@IsNull_harga = 1 AND [harga] IS NULL) OR ([harga] = @Original_harga)) AND ((@IsNull_tanggal = 1 AND [tanggal] IS NULL) OR ([tanggal] = @Original_tanggal)) AND ((@IsNull_jam = 1 AND [jam] IS NULL) OR ([jam] = @Original_jam)) AND ((@IsNull_idMobil = 1 AND [idMobil] IS NULL) OR ([idMobil] = @Original_idMobil)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Pemesanan] WHERE (([idPesan] = @Original_idPesan) AND ([alamatTujuan] = @Original_alamatTujuan) AND ([alamatJemput] = @Original_alamatJemput) AND ([jumlahOrang] = @Original_jumlahOrang) AND ([harga] = @Original_harga) AND ([tanggal] = @Original_tanggal) AND ([jam] = @Original_jam) AND ((@IsNull_idMobil = 1 AND [idMobil] IS NULL) OR ([idMobil] = @Original_idMobil)) AND ([noTelp] = @Original_noTelp))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPesan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPesan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_alamatTujuan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatTujuan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_alamatTujuan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatTujuan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_alamatJemput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatJemput", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_alamatJemput", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatJemput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_jumlahOrang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jumlahOrang", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_jumlahOrang", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jumlahOrang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tanggal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tanggal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tanggal", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tanggal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_jam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_jam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idMobil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idMobil", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idMobil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idMobil", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_noTelp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "noTelp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Pemesanan] ([idPesan], [alamatTujuan], [alamatJemput], [jumlahOrang], [harga], [tanggal], [jam], [idMobil]) VALUES (@idPesan, @alamatTujuan, @alamatJemput, @jumlahOrang, @harga, @tanggal, @jam, @idMobil);
-SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idMobil FROM Pemesanan WHERE (idPesan = @idPesan)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Pemesanan] ([idPesan], [alamatTujuan], [alamatJemput], [jumlahOrang], [harga], [tanggal], [jam], [idMobil], [noTelp]) VALUES (@idPesan, @alamatTujuan, @alamatJemput, @jumlahOrang, @harga, @tanggal, @jam, @idMobil, @noTelp);
+SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idMobil, noTelp FROM Pemesanan WHERE (idPesan = @idPesan)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPesan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPesan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@alamatTujuan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatTujuan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3719,10 +3614,11 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tanggal", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tanggal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@jam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idMobil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idMobil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@noTelp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "noTelp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Pemesanan] SET [idPesan] = @idPesan, [alamatTujuan] = @alamatTujuan, [alamatJemput] = @alamatJemput, [jumlahOrang] = @jumlahOrang, [harga] = @harga, [tanggal] = @tanggal, [jam] = @jam, [idMobil] = @idMobil WHERE (([idPesan] = @Original_idPesan) AND ((@IsNull_alamatTujuan = 1 AND [alamatTujuan] IS NULL) OR ([alamatTujuan] = @Original_alamatTujuan)) AND ((@IsNull_alamatJemput = 1 AND [alamatJemput] IS NULL) OR ([alamatJemput] = @Original_alamatJemput)) AND ((@IsNull_jumlahOrang = 1 AND [jumlahOrang] IS NULL) OR ([jumlahOrang] = @Original_jumlahOrang)) AND ((@IsNull_harga = 1 AND [harga] IS NULL) OR ([harga] = @Original_harga)) AND ((@IsNull_tanggal = 1 AND [tanggal] IS NULL) OR ([tanggal] = @Original_tanggal)) AND ((@IsNull_jam = 1 AND [jam] IS NULL) OR ([jam] = @Original_jam)) AND ((@IsNull_idMobil = 1 AND [idMobil] IS NULL) OR ([idMobil] = @Original_idMobil)));
-SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idMobil FROM Pemesanan WHERE (idPesan = @idPesan)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Pemesanan] SET [idPesan] = @idPesan, [alamatTujuan] = @alamatTujuan, [alamatJemput] = @alamatJemput, [jumlahOrang] = @jumlahOrang, [harga] = @harga, [tanggal] = @tanggal, [jam] = @jam, [idMobil] = @idMobil, [noTelp] = @noTelp WHERE (([idPesan] = @Original_idPesan) AND ([alamatTujuan] = @Original_alamatTujuan) AND ([alamatJemput] = @Original_alamatJemput) AND ([jumlahOrang] = @Original_jumlahOrang) AND ([harga] = @Original_harga) AND ([tanggal] = @Original_tanggal) AND ([jam] = @Original_jam) AND ((@IsNull_idMobil = 1 AND [idMobil] IS NULL) OR ([idMobil] = @Original_idMobil)) AND ([noTelp] = @Original_noTelp));
+SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idMobil, noTelp FROM Pemesanan WHERE (idPesan = @idPesan)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPesan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPesan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@alamatTujuan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatTujuan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3732,21 +3628,17 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tanggal", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tanggal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@jam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idMobil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idMobil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@noTelp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "noTelp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPesan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPesan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_alamatTujuan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatTujuan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_alamatTujuan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatTujuan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_alamatJemput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatJemput", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_alamatJemput", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "alamatJemput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_jumlahOrang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jumlahOrang", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_jumlahOrang", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jumlahOrang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tanggal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tanggal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tanggal", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tanggal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_jam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_jam", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idMobil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idMobil", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idMobil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idMobil", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_noTelp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "noTelp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3763,7 +3655,7 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idM" +
-                "obil FROM dbo.Pemesanan";
+                "obil, noTelp FROM dbo.Pemesanan";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3824,63 +3716,47 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idPesan, string Original_alamatTujuan, string Original_alamatJemput, string Original_jumlahOrang, global::System.Nullable<int> Original_harga, global::System.Nullable<global::System.DateTime> Original_tanggal, string Original_jam, global::System.Nullable<int> Original_idMobil) {
+        public virtual int Delete(int Original_idPesan, string Original_alamatTujuan, string Original_alamatJemput, string Original_jumlahOrang, int Original_harga, System.DateTime Original_tanggal, string Original_jam, global::System.Nullable<int> Original_idMobil, string Original_noTelp) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idPesan));
             if ((Original_alamatTujuan == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_alamatTujuan");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_alamatTujuan));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_alamatTujuan));
             }
             if ((Original_alamatJemput == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_alamatJemput");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_alamatJemput));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_alamatJemput));
             }
             if ((Original_jumlahOrang == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_jumlahOrang");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_jumlahOrang));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_jumlahOrang));
             }
-            if ((Original_harga.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_harga));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_tanggal));
+            if ((Original_jam == null)) {
+                throw new global::System.ArgumentNullException("Original_jam");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_jam));
+            }
+            if ((Original_idMobil.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_harga.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_idMobil.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_tanggal.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_tanggal.Value));
+            if ((Original_noTelp == null)) {
+                throw new global::System.ArgumentNullException("Original_noTelp");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_jam == null)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_jam));
-            }
-            if ((Original_idMobil.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_idMobil.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_noTelp));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3902,40 +3778,30 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idPesan, string alamatTujuan, string alamatJemput, string jumlahOrang, global::System.Nullable<int> harga, global::System.Nullable<global::System.DateTime> tanggal, string jam, global::System.Nullable<int> idMobil) {
+        public virtual int Insert(int idPesan, string alamatTujuan, string alamatJemput, string jumlahOrang, int harga, System.DateTime tanggal, string jam, global::System.Nullable<int> idMobil, string noTelp) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idPesan));
             if ((alamatTujuan == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("alamatTujuan");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(alamatTujuan));
             }
             if ((alamatJemput == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("alamatJemput");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(alamatJemput));
             }
             if ((jumlahOrang == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("jumlahOrang");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(jumlahOrang));
             }
-            if ((harga.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(harga.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((tanggal.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(tanggal.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(harga));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(tanggal));
             if ((jam == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("jam");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(jam));
@@ -3945,6 +3811,12 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((noTelp == null)) {
+                throw new global::System.ArgumentNullException("noTelp");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(noTelp));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3971,51 +3843,43 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
                     string alamatTujuan, 
                     string alamatJemput, 
                     string jumlahOrang, 
-                    global::System.Nullable<int> harga, 
-                    global::System.Nullable<global::System.DateTime> tanggal, 
+                    int harga, 
+                    System.DateTime tanggal, 
                     string jam, 
                     global::System.Nullable<int> idMobil, 
+                    string noTelp, 
                     int Original_idPesan, 
                     string Original_alamatTujuan, 
                     string Original_alamatJemput, 
                     string Original_jumlahOrang, 
-                    global::System.Nullable<int> Original_harga, 
-                    global::System.Nullable<global::System.DateTime> Original_tanggal, 
+                    int Original_harga, 
+                    System.DateTime Original_tanggal, 
                     string Original_jam, 
-                    global::System.Nullable<int> Original_idMobil) {
+                    global::System.Nullable<int> Original_idMobil, 
+                    string Original_noTelp) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idPesan));
             if ((alamatTujuan == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("alamatTujuan");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(alamatTujuan));
             }
             if ((alamatJemput == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("alamatJemput");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(alamatJemput));
             }
             if ((jumlahOrang == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("jumlahOrang");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(jumlahOrang));
             }
-            if ((harga.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(harga.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((tanggal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(tanggal.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(harga));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(tanggal));
             if ((jam == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("jam");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(jam));
@@ -4026,62 +3890,52 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_idPesan));
-            if ((Original_alamatTujuan == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            if ((noTelp == null)) {
+                throw new global::System.ArgumentNullException("noTelp");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(noTelp));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_idPesan));
+            if ((Original_alamatTujuan == null)) {
+                throw new global::System.ArgumentNullException("Original_alamatTujuan");
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_alamatTujuan));
             }
             if ((Original_alamatJemput == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_alamatJemput");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_alamatJemput));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_alamatJemput));
             }
             if ((Original_jumlahOrang == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_jumlahOrang");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_jumlahOrang));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_jumlahOrang));
             }
-            if ((Original_harga.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_harga.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((Original_tanggal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_tanggal.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_harga));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_tanggal));
             if ((Original_jam == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_jam");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_jam));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_jam));
             }
             if ((Original_idMobil.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_idMobil.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_idMobil.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_noTelp == null)) {
+                throw new global::System.ArgumentNullException("Original_noTelp");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_noTelp));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4103,8 +3957,25 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string alamatTujuan, string alamatJemput, string jumlahOrang, global::System.Nullable<int> harga, global::System.Nullable<global::System.DateTime> tanggal, string jam, global::System.Nullable<int> idMobil, int Original_idPesan, string Original_alamatTujuan, string Original_alamatJemput, string Original_jumlahOrang, global::System.Nullable<int> Original_harga, global::System.Nullable<global::System.DateTime> Original_tanggal, string Original_jam, global::System.Nullable<int> Original_idMobil) {
-            return this.Update(Original_idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idMobil, Original_idPesan, Original_alamatTujuan, Original_alamatJemput, Original_jumlahOrang, Original_harga, Original_tanggal, Original_jam, Original_idMobil);
+        public virtual int Update(
+                    string alamatTujuan, 
+                    string alamatJemput, 
+                    string jumlahOrang, 
+                    int harga, 
+                    System.DateTime tanggal, 
+                    string jam, 
+                    global::System.Nullable<int> idMobil, 
+                    string noTelp, 
+                    int Original_idPesan, 
+                    string Original_alamatTujuan, 
+                    string Original_alamatJemput, 
+                    string Original_jumlahOrang, 
+                    int Original_harga, 
+                    System.DateTime Original_tanggal, 
+                    string Original_jam, 
+                    global::System.Nullable<int> Original_idMobil, 
+                    string Original_noTelp) {
+            return this.Update(Original_idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, idMobil, noTelp, Original_idPesan, Original_alamatTujuan, Original_alamatJemput, Original_jumlahOrang, Original_harga, Original_tanggal, Original_jam, Original_idMobil, Original_noTelp);
         }
     }
     
@@ -4270,15 +4141,6 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(ProjectAkhirPABDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._mobilTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Mobil.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._mobilTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._adminTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Admin.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -4294,6 +4156,15 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._mobilTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Mobil.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._mobilTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4316,14 +4187,6 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(ProjectAkhirPABDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._mobilTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Mobil.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._mobilTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._adminTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Admin.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -4337,6 +4200,14 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._mobilTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Mobil.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._mobilTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4366,6 +4237,14 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._mobilTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Mobil.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._mobilTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4379,14 +4258,6 @@ SELECT idPesan, alamatTujuan, alamatJemput, jumlahOrang, harga, tanggal, jam, id
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._adminTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._mobilTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Mobil.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._mobilTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

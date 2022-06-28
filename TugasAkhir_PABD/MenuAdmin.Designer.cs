@@ -58,6 +58,7 @@ namespace TugasAkhir_PABD
             this.btMobil.TabIndex = 5;
             this.btMobil.Text = "Data Mobil";
             this.btMobil.UseVisualStyleBackColor = true;
+            this.btMobil.Click += new System.EventHandler(this.btMobil_Click);
             // 
             // btCustomer
             // 
