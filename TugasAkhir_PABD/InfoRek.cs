@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TugasAkhir_PABD
 {
-    public partial class Pemesanan : Form
+    public partial class InfoRek : Form
     {
-        public Pemesanan()
+        public InfoRek()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,21 +29,9 @@ namespace TugasAkhir_PABD
             cust.Show();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Pemesanan_Load(object sender, EventArgs e)
+        private void InfoRek_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-        }
-
-        private void btPesan_Click(object sender, EventArgs e)
-        {
-            InfoRek info = new InfoRek();
-            this.Hide();
-            info.Show();
         }
     }
 }

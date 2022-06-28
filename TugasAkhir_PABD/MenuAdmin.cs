@@ -28,5 +28,12 @@ namespace TugasAkhir_PABD
             this.Hide();
             menu.Show();
         }
+
+        private void btReport_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            this.Hide();
+            report.Show();
+        }
     }
 }

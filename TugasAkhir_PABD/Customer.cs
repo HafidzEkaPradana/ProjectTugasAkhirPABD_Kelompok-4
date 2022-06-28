@@ -35,5 +35,19 @@ namespace TugasAkhir_PABD
             this.Hide();
             viewMobil.Show();
         }
+
+        private void btPemesanan_Click(object sender, EventArgs e)
+        {
+            Pemesanan pesan = new Pemesanan();
+            this.Hide();
+            pesan.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ViewPemesanan viewPemesanan = new ViewPemesanan();
+            this.Hide();
+            viewPemesanan.Show();
+        }
     }
 }

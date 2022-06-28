@@ -36,6 +36,7 @@ namespace TugasAkhir_PABD
             this.btPesan = new System.Windows.Forms.Button();
             this.btInfo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@ namespace TugasAkhir_PABD
             // 
             // btCustomer
             // 
-            this.btCustomer.Location = new System.Drawing.Point(234, 53);
+            this.btCustomer.Location = new System.Drawing.Point(223, 53);
             this.btCustomer.Name = "btCustomer";
             this.btCustomer.Size = new System.Drawing.Size(155, 136);
             this.btCustomer.TabIndex = 6;
@@ -69,7 +70,7 @@ namespace TugasAkhir_PABD
             // 
             // btPesan
             // 
-            this.btPesan.Location = new System.Drawing.Point(234, 218);
+            this.btPesan.Location = new System.Drawing.Point(223, 218);
             this.btPesan.Name = "btPesan";
             this.btPesan.Size = new System.Drawing.Size(155, 136);
             this.btPesan.TabIndex = 7;
@@ -95,11 +96,22 @@ namespace TugasAkhir_PABD
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // btReport
+            // 
+            this.btReport.Location = new System.Drawing.Point(413, 379);
+            this.btReport.Name = "btReport";
+            this.btReport.Size = new System.Drawing.Size(347, 40);
+            this.btReport.TabIndex = 10;
+            this.btReport.Text = "Lihat Report";
+            this.btReport.UseVisualStyleBackColor = true;
+            this.btReport.Click += new System.EventHandler(this.btReport_Click);
+            // 
             // MenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btReport);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btInfo);
             this.Controls.Add(this.btPesan);
@@ -122,5 +134,6 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.Button btPesan;
         private System.Windows.Forms.Button btInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btReport;
     }
 }
