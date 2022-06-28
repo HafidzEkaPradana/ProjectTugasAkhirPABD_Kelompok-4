@@ -21,7 +21,7 @@ namespace TugasAkhir_PABD
         {
             // TODO: This line of code loads data into the 'ProjectAkhirPABDDataSet.Pemesanan' table. You can move, or remove it, as needed.
             this.PemesananTableAdapter.Fill(this.ProjectAkhirPABDDataSet.Pemesanan);
-
+            this.CenterToScreen();
             this.reportViewer1.RefreshReport();
         }
 

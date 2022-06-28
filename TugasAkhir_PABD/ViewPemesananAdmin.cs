@@ -78,12 +78,16 @@ namespace TugasAkhir_PABD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string id;
-            id = idPesan.Text;
-            dr = projectAkhirPABDDataSet.Tables["Pemesanan"].Rows.Find(id);
-            dr.Delete();
-            pemesananTableAdapter.Update(projectAkhirPABDDataSet);
+            if(MessageBox.Show("Apakah anda ingin menghapus Pemesanan ?", "Informasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string id;
+                id = idPesan.Text;
+                dr = projectAkhirPABDDataSet.Tables["Pemesanan"].Rows.Find(id);
+                dr.Delete();
+                pemesananTableAdapter.Update(projectAkhirPABDDataSet);
+            }
         }
+           
 
         private void button1_Click(object sender, EventArgs e)
         {

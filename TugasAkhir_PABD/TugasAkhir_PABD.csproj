@@ -87,6 +87,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectAkhirPABDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ViewCustomerAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomerAdmin.Designer.cs">
+      <DependentUpon>ViewCustomerAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewMobilAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,10 @@
     <EmbeddedResource Include="InfoRek.resx">
       <DependentUpon>InfoRek.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ViewCustomerAdmin.resx">
+      <DependentUpon>ViewCustomerAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewMobilAdmin.resx">
       <DependentUpon>ViewMobilAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,7 +197,6 @@
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportPABD.rdlc" />
     <EmbeddedResource Include="ViewMobil.resx">
       <DependentUpon>ViewMobil.cs</DependentUpon>
     </EmbeddedResource>

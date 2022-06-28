@@ -31,10 +31,9 @@ namespace TugasAkhir_PABD
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mobilBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.projectAkhirPABDDataSet1 = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
-            this.mobilBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mobilBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mobilTableAdapter2 = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +41,8 @@ namespace TugasAkhir_PABD
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,17 +55,13 @@ namespace TugasAkhir_PABD
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.DataSource = this.mobilBindingSource1;
+            this.dataGridView1.DataSource = this.mobilBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(41, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(975, 241);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // mobilBindingSource
-            // 
-            this.mobilBindingSource.DataMember = "Mobil";
             // 
             // button1
             // 
@@ -84,10 +78,10 @@ namespace TugasAkhir_PABD
             this.projectAkhirPABDDataSet1.DataSetName = "ProjectAkhirPABDDataSet";
             this.projectAkhirPABDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mobilBindingSource1
+            // mobilBindingSource
             // 
-            this.mobilBindingSource1.DataMember = "Mobil";
-            this.mobilBindingSource1.DataSource = this.projectAkhirPABDDataSet1;
+            this.mobilBindingSource.DataMember = "Mobil";
+            this.mobilBindingSource.DataSource = this.projectAkhirPABDDataSet1;
             // 
             // mobilTableAdapter2
             // 
@@ -144,9 +138,8 @@ namespace TugasAkhir_PABD
             this.Text = "ViewMobil";
             this.Load += new System.EventHandler(this.ViewMobil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,7 +150,6 @@ namespace TugasAkhir_PABD
         private ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter mobilTableAdapter;
         private System.Windows.Forms.Button button1;
         private ProjectAkhirPABDDataSet projectAkhirPABDDataSet;
-        private System.Windows.Forms.BindingSource mobilBindingSource;
         private ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter mobilTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMobilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaMobilDataGridViewTextBoxColumn;
@@ -165,7 +157,7 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.DataGridViewTextBoxColumn jenisMobilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn merkDataGridViewTextBoxColumn;
         private ProjectAkhirPABDDataSet projectAkhirPABDDataSet1;
-        private System.Windows.Forms.BindingSource mobilBindingSource1;
+        private System.Windows.Forms.BindingSource mobilBindingSource;
         private ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter mobilTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

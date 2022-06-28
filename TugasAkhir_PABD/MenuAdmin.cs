@@ -49,5 +49,12 @@ namespace TugasAkhir_PABD
             this.Hide();
             view.Show();
         }
+
+        private void btCustomer_Click(object sender, EventArgs e)
+        {
+            ViewCustomerAdmin viewCustomer = new ViewCustomerAdmin();
+            this.Hide();
+            viewCustomer.Show();
+        }
     }
 }

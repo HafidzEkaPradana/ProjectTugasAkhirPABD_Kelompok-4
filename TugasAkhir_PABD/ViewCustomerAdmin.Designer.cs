@@ -1,7 +1,7 @@
 ﻿
 namespace TugasAkhir_PABD
 {
-    partial class ViewMobilAdmin
+    partial class ViewCustomerAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,53 +30,72 @@ namespace TugasAkhir_PABD
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMobilAdmin));
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCustomerAdmin));
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btDelete = new System.Windows.Forms.Button();
+            this.btUpdate = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbJenis = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txIDMobil = new System.Windows.Forms.TextBox();
+            this.txIDcust = new System.Windows.Forms.TextBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectAkhirPABDDataSet = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbMerk = new System.Windows.Forms.ComboBox();
-            this.txPlatNo = new System.Windows.Forms.TextBox();
-            this.cbNamaMobil = new System.Windows.Forms.ComboBox();
-            this.btAdd = new System.Windows.Forms.Button();
-            this.btUpdate = new System.Windows.Forms.Button();
-            this.btDelete = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbJenisklamin = new System.Windows.Forms.ComboBox();
+            this.txNamaCust = new System.Windows.Forms.TextBox();
+            this.txNotelp = new System.Windows.Forms.TextBox();
+            this.txEmail = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.projectAkhirPABDDataSet2 = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
-            this.mobilBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mobilTableAdapter2 = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter();
+            this.customerTableAdapter = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.CustomerTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // checkBox1
             // 
-            this.button1.Location = new System.Drawing.Point(35, 357);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(32, 293);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(276, 24);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "Check untuk mengaktifkan tombol";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // btDelete
+            // 
+            this.btDelete.Location = new System.Drawing.Point(593, 231);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(176, 40);
+            this.btDelete.TabIndex = 19;
+            this.btDelete.Text = "Hapus";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // btUpdate
+            // 
+            this.btUpdate.Location = new System.Drawing.Point(593, 149);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(176, 40);
+            this.btUpdate.TabIndex = 18;
+            this.btUpdate.Text = "Update";
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -87,16 +106,16 @@ namespace TugasAkhir_PABD
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.31298F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.68702F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.cbJenis, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txIDMobil, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txIDcust, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbMerk, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txPlatNo, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbNamaMobil, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(35, 73);
+            this.tableLayoutPanel1.Controls.Add(this.cbJenisklamin, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txNamaCust, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txNotelp, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txEmail, 1, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 63);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
@@ -104,8 +123,9 @@ namespace TugasAkhir_PABD
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(526, 214);
-            this.tableLayoutPanel1.TabIndex = 9;
+            this.tableLayoutPanel1.TabIndex = 16;
             // 
             // label5
             // 
@@ -113,19 +133,9 @@ namespace TugasAkhir_PABD
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Merk";
-            // 
-            // cbJenis
-            // 
-            this.cbJenis.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbJenis.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mobilBindingSource, "jenisMobil", true));
-            this.cbJenis.FormattingEnabled = true;
-            this.cbJenis.Location = new System.Drawing.Point(209, 135);
-            this.cbJenis.Name = "cbJenis";
-            this.cbJenis.Size = new System.Drawing.Size(312, 28);
-            this.cbJenis.TabIndex = 15;
+            this.label5.Text = "Jenis Kelamin";
             // 
             // label4
             // 
@@ -133,9 +143,9 @@ namespace TugasAkhir_PABD
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Jenis Mobil";
+            this.label4.Text = "Email";
             // 
             // label2
             // 
@@ -143,18 +153,28 @@ namespace TugasAkhir_PABD
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nama Mobil";
+            this.label2.Text = "Nama";
             // 
-            // txIDMobil
+            // txIDcust
             // 
-            this.txIDMobil.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txIDMobil.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mobilBindingSource, "idMobil", true));
-            this.txIDMobil.Location = new System.Drawing.Point(209, 8);
-            this.txIDMobil.Name = "txIDMobil";
-            this.txIDMobil.Size = new System.Drawing.Size(312, 26);
-            this.txIDMobil.TabIndex = 13;
+            this.txIDcust.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txIDcust.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "id", true));
+            this.txIDcust.Location = new System.Drawing.Point(209, 8);
+            this.txIDcust.Name = "txIDcust";
+            this.txIDcust.Size = new System.Drawing.Size(312, 26);
+            this.txIDcust.TabIndex = 13;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.projectAkhirPABDDataSet;
+            // 
+            // projectAkhirPABDDataSet
+            // 
+            this.projectAkhirPABDDataSet.DataSetName = "ProjectAkhirPABDDataSet";
+            this.projectAkhirPABDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -162,9 +182,9 @@ namespace TugasAkhir_PABD
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ID Mobil";
+            this.label1.Text = "ID Customer";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
@@ -173,84 +193,61 @@ namespace TugasAkhir_PABD
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Plat No";
+            this.label3.Text = "No Telpon";
             // 
-            // cbMerk
+            // cbJenisklamin
             // 
-            this.cbMerk.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbMerk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mobilBindingSource, "Merk", true));
-            this.cbMerk.FormattingEnabled = true;
-            this.cbMerk.Location = new System.Drawing.Point(209, 178);
-            this.cbMerk.Name = "cbMerk";
-            this.cbMerk.Size = new System.Drawing.Size(312, 28);
-            this.cbMerk.TabIndex = 17;
+            this.cbJenisklamin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbJenisklamin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "jenisKelamin", true));
+            this.cbJenisklamin.FormattingEnabled = true;
+            this.cbJenisklamin.Location = new System.Drawing.Point(209, 178);
+            this.cbJenisklamin.Name = "cbJenisklamin";
+            this.cbJenisklamin.Size = new System.Drawing.Size(312, 28);
+            this.cbJenisklamin.TabIndex = 17;
             // 
-            // txPlatNo
+            // txNamaCust
             // 
-            this.txPlatNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txPlatNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mobilBindingSource, "PlatNo", true));
-            this.txPlatNo.Location = new System.Drawing.Point(210, 93);
-            this.txPlatNo.Name = "txPlatNo";
-            this.txPlatNo.Size = new System.Drawing.Size(312, 26);
-            this.txPlatNo.TabIndex = 18;
+            this.txNamaCust.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txNamaCust.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Nama", true));
+            this.txNamaCust.Location = new System.Drawing.Point(210, 51);
+            this.txNamaCust.Name = "txNamaCust";
+            this.txNamaCust.Size = new System.Drawing.Size(312, 26);
+            this.txNamaCust.TabIndex = 18;
             // 
-            // cbNamaMobil
+            // txNotelp
             // 
-            this.cbNamaMobil.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbNamaMobil.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mobilBindingSource, "NamaMobil", true));
-            this.cbNamaMobil.FormattingEnabled = true;
-            this.cbNamaMobil.Location = new System.Drawing.Point(209, 50);
-            this.cbNamaMobil.Name = "cbNamaMobil";
-            this.cbNamaMobil.Size = new System.Drawing.Size(312, 28);
-            this.cbNamaMobil.TabIndex = 19;
+            this.txNotelp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txNotelp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "noTelp", true));
+            this.txNotelp.Location = new System.Drawing.Point(210, 93);
+            this.txNotelp.Name = "txNotelp";
+            this.txNotelp.Size = new System.Drawing.Size(312, 26);
+            this.txNotelp.TabIndex = 18;
             // 
-            // btAdd
+            // txEmail
             // 
-            this.btAdd.Location = new System.Drawing.Point(596, 74);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(176, 40);
-            this.btAdd.TabIndex = 10;
-            this.btAdd.Text = "Tambah";
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+            this.txEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "email", true));
+            this.txEmail.Location = new System.Drawing.Point(210, 136);
+            this.txEmail.Name = "txEmail";
+            this.txEmail.Size = new System.Drawing.Size(312, 26);
+            this.txEmail.TabIndex = 18;
             // 
-            // btUpdate
+            // button1
             // 
-            this.btUpdate.Location = new System.Drawing.Point(596, 159);
-            this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(176, 40);
-            this.btUpdate.TabIndex = 11;
-            this.btUpdate.Text = "Update";
-            this.btUpdate.UseVisualStyleBackColor = true;
-            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
-            // 
-            // btDelete
-            // 
-            this.btDelete.Location = new System.Drawing.Point(596, 241);
-            this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(176, 40);
-            this.btDelete.TabIndex = 12;
-            this.btDelete.Text = "Hapus";
-            this.btDelete.UseVisualStyleBackColor = true;
-            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(35, 303);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(296, 24);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Check jika ingin mengaktifkan tombol";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.button1.Location = new System.Drawing.Point(32, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bindingNavigator1
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.mobilBindingSource;
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.BindingSource = this.customerBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -263,8 +260,7 @@ namespace TugasAkhir_PABD
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem});
+            this.bindingNavigatorSeparator2});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -273,8 +269,15 @@ namespace TugasAkhir_PABD
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
             this.bindingNavigator1.Size = new System.Drawing.Size(800, 33);
-            this.bindingNavigator1.TabIndex = 15;
+            this.bindingNavigator1.TabIndex = 21;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -309,16 +312,9 @@ namespace TugasAkhir_PABD
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
@@ -341,83 +337,58 @@ namespace TugasAkhir_PABD
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
-            // bindingNavigatorAddNewItem
+            // customerTableAdapter
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // projectAkhirPABDDataSet2
-            // 
-            this.projectAkhirPABDDataSet2.DataSetName = "ProjectAkhirPABDDataSet";
-            this.projectAkhirPABDDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mobilBindingSource
-            // 
-            this.mobilBindingSource.DataMember = "Mobil";
-            this.mobilBindingSource.DataSource = this.projectAkhirPABDDataSet2;
-            // 
-            // mobilTableAdapter2
-            // 
-            this.mobilTableAdapter2.ClearBeforeFill = true;
-            // 
-            // ViewMobilAdmin
+            // ViewCustomerAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 427);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btUpdate);
-            this.Controls.Add(this.btAdd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ViewMobilAdmin";
-            this.Text = "Data Mobil";
-            this.Load += new System.EventHandler(this.Mobil_Load);
+            this.Name = "ViewCustomerAdmin";
+            this.Text = "ViewCustomerAdmin";
+            this.Load += new System.EventHandler(this.ViewCustomerAdmin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox cbJenis;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txIDMobil;
+        private System.Windows.Forms.TextBox txIDcust;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbMerk;
-        private System.Windows.Forms.TextBox txPlatNo;
-        private ProjectAkhirPABDDataSet projectAkhirPABDDataSet;
-        private ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter mobilTableAdapter;
-        private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.Button btUpdate;
-        private System.Windows.Forms.Button btDelete;
-        private System.Windows.Forms.ComboBox cbNamaMobil;
-        private ProjectAkhirPABDDataSet projectAkhirPABDDataSet1;
-        private ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter mobilTableAdapter1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cbJenisklamin;
+        private System.Windows.Forms.TextBox txNamaCust;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txNotelp;
+        private System.Windows.Forms.TextBox txEmail;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
@@ -427,8 +398,8 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private ProjectAkhirPABDDataSet projectAkhirPABDDataSet2;
-        private System.Windows.Forms.BindingSource mobilBindingSource;
-        private ProjectAkhirPABDDataSetTableAdapters.MobilTableAdapter mobilTableAdapter2;
+        private ProjectAkhirPABDDataSet projectAkhirPABDDataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private ProjectAkhirPABDDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
     }
 }

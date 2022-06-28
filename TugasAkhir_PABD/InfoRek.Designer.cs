@@ -33,6 +33,7 @@ namespace TugasAkhir_PABD
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -66,11 +67,21 @@ namespace TugasAkhir_PABD
             this.label2.Text = "3475-02-014764-51-9";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(187, 310);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(432, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Harap segera transfer 4 jam setelah melakukan pemesanan";
+            // 
             // InfoRek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -88,5 +99,6 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

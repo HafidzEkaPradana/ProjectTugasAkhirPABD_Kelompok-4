@@ -68,6 +68,7 @@ namespace TugasAkhir_PABD
             this.btCustomer.TabIndex = 6;
             this.btCustomer.Text = "Data Customer";
             this.btCustomer.UseVisualStyleBackColor = true;
+            this.btCustomer.Click += new System.EventHandler(this.btCustomer_Click);
             // 
             // btPesan
             // 

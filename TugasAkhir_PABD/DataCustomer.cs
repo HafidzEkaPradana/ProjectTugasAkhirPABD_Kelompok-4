@@ -20,7 +20,10 @@ namespace TugasAkhir_PABD
 
         private void DataCustomer_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
 
+            cbJenis.Items.Add("Laki - Laki");
+            cbJenis.Items.Add("Perempuan");
         }
 
         private void btPesanSelesai_Click(object sender, EventArgs e)

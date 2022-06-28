@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,8 @@ namespace TugasAkhir_PABD
 
         private void Mobil_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet1.Mobil' table. You can move, or remove it, as needed.
-            this.mobilTableAdapter1.Fill(this.projectAkhirPABDDataSet1.Mobil);
+            // TODO: This line of code loads data into the 'projectAkhirPABDDataSet2.Mobil' table. You can move, or remove it, as needed.
+            this.mobilTableAdapter2.Fill(this.projectAkhirPABDDataSet2.Mobil);
             this.CenterToScreen();
 
             btAdd.Enabled = false;
@@ -62,23 +63,35 @@ namespace TugasAkhir_PABD
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            string idMobil;
-            idMobil = txIDMobil.Text;
-            dr = projectAkhirPABDDataSet.Tables["Mobil"].Rows.Find(idMobil);
-            dr.Delete();
-            mobilTableAdapter.Update(projectAkhirPABDDataSet);
+            if (MessageBox.Show("Apakah anda ingin menghapus Mobil ?", "Informasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string idMobil;
+                    idMobil = txIDMobil.Text;
+                    dr = projectAkhirPABDDataSet2.Tables["Mobil"].Rows.Find(idMobil);
+                    dr.Delete();
+                    mobilTableAdapter2.Update(projectAkhirPABDDataSet2);
+                }
+            
 
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Apakah anda ingin menambahkan Mobil ?", "Informasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SqlConnection conn = new SqlConnection("data source=LAPTOP-8MKEQ456; database=ProjectAkhirPABD; Integrated Security=True; User ID=sa;Password=mentepermaib20");
+                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Mobil]([idMobil],[NamaMobil],[PlatNo],[jenisMobil],[Merk]) VALUES ('" + txIDMobil.Text + "','" + cbNamaMobil.Text + "','" + txPlatNo.Text + "','" + cbJenis.Text + "','" + cbMerk.Text + "')", conn);
 
-            
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            dt = projectAkhirPABDDataSet.Tables["Mobil"];
+            dt = projectAkhirPABDDataSet2.Tables["Mobil"];
             dr = dt.NewRow();
 
             dr[0] = txIDMobil.Text;
@@ -88,10 +101,10 @@ namespace TugasAkhir_PABD
             dr[4] = cbMerk.Text;
 
             dt.Rows.Add(dr);
-            mobilTableAdapter.Update(projectAkhirPABDDataSet);
+            mobilTableAdapter2.Update(projectAkhirPABDDataSet2);
             txIDMobil.Text = System.Convert.ToString(dr[0]);
 
-            this.mobilTableAdapter.Fill(this.projectAkhirPABDDataSet.Mobil);
+            this.mobilTableAdapter2.Fill(this.projectAkhirPABDDataSet2.Mobil);
             btUpdate.Enabled = false;
         }
 
