@@ -1,7 +1,7 @@
 ﻿
 namespace TugasAkhir_PABD
 {
-    partial class DataMobil
+    partial class ViewMobil
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@ namespace TugasAkhir_PABD
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.projectAkhirPABDDataSet = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
             this.mobilBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,20 +39,11 @@ namespace TugasAkhir_PABD
             this.platNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenisMobilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.merkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(37, 379);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -66,12 +56,12 @@ namespace TugasAkhir_PABD
             this.jenisMobilDataGridViewTextBoxColumn,
             this.merkDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.mobilBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 224);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Size = new System.Drawing.Size(793, 241);
+            this.dataGridView1.TabIndex = 0;
             // 
             // projectAkhirPABDDataSet
             // 
@@ -127,16 +117,26 @@ namespace TugasAkhir_PABD
             this.merkDataGridViewTextBoxColumn.Name = "merkDataGridViewTextBoxColumn";
             this.merkDataGridViewTextBoxColumn.Width = 150;
             // 
-            // DataMobil
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(41, 321);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ViewMobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(875, 387);
             this.Controls.Add(this.button1);
-            this.Name = "DataMobil";
-            this.Text = "DataMobil";
-            this.Load += new System.EventHandler(this.DataMobil_Load);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "ViewMobil";
+            this.Text = "ViewMobil";
+            this.Load += new System.EventHandler(this.ViewMobil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobilBindingSource)).EndInit();
@@ -146,7 +146,6 @@ namespace TugasAkhir_PABD
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ProjectAkhirPABDDataSet projectAkhirPABDDataSet;
         private System.Windows.Forms.BindingSource mobilBindingSource;
@@ -156,5 +155,6 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.DataGridViewTextBoxColumn platNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jenisMobilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn merkDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

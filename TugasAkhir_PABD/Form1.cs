@@ -16,5 +16,25 @@ namespace TugasAkhir_PABD
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Customer cust = new Customer();
+            this.Hide();
+            cust.Show();
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoginAdmin admin = new LoginAdmin();
+            this.Hide();
+            admin.Show();
+        }
     }
 }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TugasAkhir_PABD
 {
-    public partial class Customer : Form
+    public partial class MenuAdmin : Form
     {
-        public Customer()
+        public MenuAdmin()
         {
             InitializeComponent();
         }
 
-        private void Customer_Load(object sender, EventArgs e)
+        private void MenuAdmin_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
         }
@@ -27,13 +27,6 @@ namespace TugasAkhir_PABD
             Form1 menu = new Form1();
             this.Hide();
             menu.Show();
-        }
-
-        private void btMobil_Click(object sender, EventArgs e)
-        {
-            ViewMobil viewMobil = new ViewMobil();
-            this.Hide();
-            viewMobil.Show();
         }
     }
 }
