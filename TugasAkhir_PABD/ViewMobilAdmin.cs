@@ -105,7 +105,6 @@ namespace TugasAkhir_PABD
             txIDMobil.Text = System.Convert.ToString(dr[0]);
 
             this.mobilTableAdapter2.Fill(this.projectAkhirPABDDataSet2.Mobil);
-            btUpdate.Enabled = false;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

@@ -60,9 +60,9 @@ namespace TugasAkhir_PABD
 
                 idMobil.Clear();
                 idPesan.Clear();
-                txAlamat.Clear();
-                txJumlah.Clear();
                 txTujuan.Clear();
+                txJumlah.Clear();
+                txAlamat.Clear();
                 txNotelp.Clear();
 
                 DataCustomer data = new DataCustomer();

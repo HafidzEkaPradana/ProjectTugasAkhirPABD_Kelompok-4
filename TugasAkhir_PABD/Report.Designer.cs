@@ -60,7 +60,7 @@ namespace TugasAkhir_PABD
             this.reportViewer1.Location = new System.Drawing.Point(79, 53);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1072, 525);
+            this.reportViewer1.Size = new System.Drawing.Size(1136, 525);
             this.reportViewer1.TabIndex = 0;
             // 
             // PemesananTableAdapter
@@ -82,7 +82,7 @@ namespace TugasAkhir_PABD
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1217, 685);
+            this.ClientSize = new System.Drawing.Size(1295, 685);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

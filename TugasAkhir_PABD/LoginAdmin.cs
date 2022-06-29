@@ -42,6 +42,7 @@ namespace TugasAkhir_PABD
             {
                 String emailMasuk = "eka@gmail.com";
                 String passMasuk = "pradana";
+
                 /*conn.Open();
                 String query = "SELECT * FROM Admin WHERE email = '" + txEmail.Text + "' AND password = '" + txPassword.Text + "'";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);

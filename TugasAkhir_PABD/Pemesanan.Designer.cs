@@ -31,6 +31,25 @@ namespace TugasAkhir_PABD
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pemesanan));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txNotelp = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbHarga = new System.Windows.Forms.ComboBox();
+            this.cbJam = new System.Windows.Forms.ComboBox();
+            this.btPesan = new System.Windows.Forms.Button();
+            this.dtTanggal = new System.Windows.Forms.DateTimePicker();
+            this.idMobil = new System.Windows.Forms.TextBox();
+            this.txJumlah = new System.Windows.Forms.TextBox();
+            this.txAlamat = new System.Windows.Forms.TextBox();
+            this.txTujuan = new System.Windows.Forms.TextBox();
+            this.idPesan = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,25 +61,6 @@ namespace TugasAkhir_PABD
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.idPesan = new System.Windows.Forms.TextBox();
-            this.txAlamat = new System.Windows.Forms.TextBox();
-            this.txTujuan = new System.Windows.Forms.TextBox();
-            this.txJumlah = new System.Windows.Forms.TextBox();
-            this.idMobil = new System.Windows.Forms.TextBox();
-            this.dtTanggal = new System.Windows.Forms.DateTimePicker();
-            this.btPesan = new System.Windows.Forms.Button();
-            this.cbJam = new System.Windows.Forms.ComboBox();
-            this.cbHarga = new System.Windows.Forms.ComboBox();
-            this.txNotelp = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,8 +76,8 @@ namespace TugasAkhir_PABD
             this.groupBox1.Controls.Add(this.dtTanggal);
             this.groupBox1.Controls.Add(this.idMobil);
             this.groupBox1.Controls.Add(this.txJumlah);
-            this.groupBox1.Controls.Add(this.txTujuan);
             this.groupBox1.Controls.Add(this.txAlamat);
+            this.groupBox1.Controls.Add(this.txTujuan);
             this.groupBox1.Controls.Add(this.idPesan);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label16);
@@ -102,6 +102,166 @@ namespace TugasAkhir_PABD
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesan Mobil";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(31, 518);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(496, 20);
+            this.label19.TabIndex = 48;
+            this.label19.Text = "*Harap isi data dengan benar karena setelah lanjut tidak bisa kembali";
+            // 
+            // txNotelp
+            // 
+            this.txNotelp.Location = new System.Drawing.Point(210, 418);
+            this.txNotelp.Name = "txNotelp";
+            this.txNotelp.Size = new System.Drawing.Size(279, 26);
+            this.txNotelp.TabIndex = 47;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(178, 421);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 20);
+            this.label12.TabIndex = 46;
+            this.label12.Text = ":";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(31, 421);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "No Telpon";
+            // 
+            // cbHarga
+            // 
+            this.cbHarga.FormattingEnabled = true;
+            this.cbHarga.Location = new System.Drawing.Point(210, 317);
+            this.cbHarga.Name = "cbHarga";
+            this.cbHarga.Size = new System.Drawing.Size(279, 28);
+            this.cbHarga.TabIndex = 44;
+            // 
+            // cbJam
+            // 
+            this.cbJam.FormattingEnabled = true;
+            this.cbJam.Location = new System.Drawing.Point(210, 266);
+            this.cbJam.Name = "cbJam";
+            this.cbJam.Size = new System.Drawing.Size(279, 28);
+            this.cbJam.TabIndex = 43;
+            // 
+            // btPesan
+            // 
+            this.btPesan.Location = new System.Drawing.Point(210, 466);
+            this.btPesan.Name = "btPesan";
+            this.btPesan.Size = new System.Drawing.Size(279, 38);
+            this.btPesan.TabIndex = 42;
+            this.btPesan.Text = "Lanjut ke Data Customer";
+            this.btPesan.UseVisualStyleBackColor = true;
+            this.btPesan.Click += new System.EventHandler(this.btPesan_Click);
+            // 
+            // dtTanggal
+            // 
+            this.dtTanggal.Location = new System.Drawing.Point(210, 221);
+            this.dtTanggal.Name = "dtTanggal";
+            this.dtTanggal.Size = new System.Drawing.Size(279, 26);
+            this.dtTanggal.TabIndex = 41;
+            // 
+            // idMobil
+            // 
+            this.idMobil.Location = new System.Drawing.Point(210, 368);
+            this.idMobil.Name = "idMobil";
+            this.idMobil.Size = new System.Drawing.Size(279, 26);
+            this.idMobil.TabIndex = 40;
+            // 
+            // txJumlah
+            // 
+            this.txJumlah.Location = new System.Drawing.Point(210, 170);
+            this.txJumlah.Name = "txJumlah";
+            this.txJumlah.Size = new System.Drawing.Size(279, 26);
+            this.txJumlah.TabIndex = 37;
+            // 
+            // txAlamat
+            // 
+            this.txAlamat.Location = new System.Drawing.Point(210, 121);
+            this.txAlamat.Name = "txAlamat";
+            this.txAlamat.Size = new System.Drawing.Size(279, 26);
+            this.txAlamat.TabIndex = 36;
+            // 
+            // txTujuan
+            // 
+            this.txTujuan.Location = new System.Drawing.Point(210, 74);
+            this.txTujuan.Name = "txTujuan";
+            this.txTujuan.Size = new System.Drawing.Size(279, 26);
+            this.txTujuan.TabIndex = 35;
+            // 
+            // idPesan
+            // 
+            this.idPesan.Location = new System.Drawing.Point(210, 28);
+            this.idPesan.Name = "idPesan";
+            this.idPesan.Size = new System.Drawing.Size(279, 26);
+            this.idPesan.TabIndex = 34;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(178, 371);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 20);
+            this.label17.TabIndex = 31;
+            this.label17.Text = ":";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(178, 320);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 20);
+            this.label16.TabIndex = 30;
+            this.label16.Text = ":";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(31, 371);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 20);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "ID Mobil";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(31, 320);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 20);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Harga";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(178, 269);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(14, 20);
+            this.label13.TabIndex = 27;
+            this.label13.Text = ":";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(31, 269);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 20);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Jam";
             // 
             // label6
             // 
@@ -208,166 +368,6 @@ namespace TugasAkhir_PABD
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(31, 269);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 20);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Jam";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(178, 269);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 20);
-            this.label13.TabIndex = 27;
-            this.label13.Text = ":";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(31, 320);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 20);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Harga";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(31, 371);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 20);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "ID Mobil";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(178, 320);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 20);
-            this.label16.TabIndex = 30;
-            this.label16.Text = ":";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(178, 371);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 20);
-            this.label17.TabIndex = 31;
-            this.label17.Text = ":";
-            // 
-            // idPesan
-            // 
-            this.idPesan.Location = new System.Drawing.Point(210, 28);
-            this.idPesan.Name = "idPesan";
-            this.idPesan.Size = new System.Drawing.Size(279, 26);
-            this.idPesan.TabIndex = 34;
-            // 
-            // txAlamat
-            // 
-            this.txAlamat.Location = new System.Drawing.Point(210, 74);
-            this.txAlamat.Name = "txAlamat";
-            this.txAlamat.Size = new System.Drawing.Size(279, 26);
-            this.txAlamat.TabIndex = 35;
-            // 
-            // txTujuan
-            // 
-            this.txTujuan.Location = new System.Drawing.Point(210, 121);
-            this.txTujuan.Name = "txTujuan";
-            this.txTujuan.Size = new System.Drawing.Size(279, 26);
-            this.txTujuan.TabIndex = 36;
-            // 
-            // txJumlah
-            // 
-            this.txJumlah.Location = new System.Drawing.Point(210, 170);
-            this.txJumlah.Name = "txJumlah";
-            this.txJumlah.Size = new System.Drawing.Size(279, 26);
-            this.txJumlah.TabIndex = 37;
-            // 
-            // idMobil
-            // 
-            this.idMobil.Location = new System.Drawing.Point(210, 368);
-            this.idMobil.Name = "idMobil";
-            this.idMobil.Size = new System.Drawing.Size(279, 26);
-            this.idMobil.TabIndex = 40;
-            // 
-            // dtTanggal
-            // 
-            this.dtTanggal.Location = new System.Drawing.Point(210, 221);
-            this.dtTanggal.Name = "dtTanggal";
-            this.dtTanggal.Size = new System.Drawing.Size(279, 26);
-            this.dtTanggal.TabIndex = 41;
-            // 
-            // btPesan
-            // 
-            this.btPesan.Location = new System.Drawing.Point(210, 466);
-            this.btPesan.Name = "btPesan";
-            this.btPesan.Size = new System.Drawing.Size(279, 38);
-            this.btPesan.TabIndex = 42;
-            this.btPesan.Text = "Lanjut ke Data Customer";
-            this.btPesan.UseVisualStyleBackColor = true;
-            this.btPesan.Click += new System.EventHandler(this.btPesan_Click);
-            // 
-            // cbJam
-            // 
-            this.cbJam.FormattingEnabled = true;
-            this.cbJam.Location = new System.Drawing.Point(210, 266);
-            this.cbJam.Name = "cbJam";
-            this.cbJam.Size = new System.Drawing.Size(279, 28);
-            this.cbJam.TabIndex = 43;
-            // 
-            // cbHarga
-            // 
-            this.cbHarga.FormattingEnabled = true;
-            this.cbHarga.Location = new System.Drawing.Point(210, 317);
-            this.cbHarga.Name = "cbHarga";
-            this.cbHarga.Size = new System.Drawing.Size(279, 28);
-            this.cbHarga.TabIndex = 44;
-            // 
-            // txNotelp
-            // 
-            this.txNotelp.Location = new System.Drawing.Point(210, 418);
-            this.txNotelp.Name = "txNotelp";
-            this.txNotelp.Size = new System.Drawing.Size(279, 26);
-            this.txNotelp.TabIndex = 47;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(178, 421);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 20);
-            this.label12.TabIndex = 46;
-            this.label12.Text = ":";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(31, 421);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 20);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "No Telpon";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(31, 518);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(496, 20);
-            this.label19.TabIndex = 48;
-            this.label19.Text = "*Harap isi data dengan benar karena setelah lanjut tidak bisa kembali";
-            // 
             // Pemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -407,8 +407,8 @@ namespace TugasAkhir_PABD
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox idMobil;
         private System.Windows.Forms.TextBox txJumlah;
-        private System.Windows.Forms.TextBox txTujuan;
         private System.Windows.Forms.TextBox txAlamat;
+        private System.Windows.Forms.TextBox txTujuan;
         private System.Windows.Forms.TextBox idPesan;
         private System.Windows.Forms.DateTimePicker dtTanggal;
         private System.Windows.Forms.Button btPesan;

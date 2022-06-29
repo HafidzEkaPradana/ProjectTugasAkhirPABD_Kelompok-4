@@ -32,6 +32,11 @@ namespace TugasAkhir_PABD
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPemesananAdmin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pemesananBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectAkhirPABDDataSet1 = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cbHarga = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,9 +65,6 @@ namespace TugasAkhir_PABD
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -73,14 +75,12 @@ namespace TugasAkhir_PABD
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.projectAkhirPABDDataSet1 = new TugasAkhir_PABD.ProjectAkhirPABDDataSet();
-            this.pemesananBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pemesananTableAdapter1 = new TugasAkhir_PABD.ProjectAkhirPABDDataSetTableAdapters.PemesananTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -122,6 +122,43 @@ namespace TugasAkhir_PABD
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Pemesanan";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pemesananBindingSource, "noTelp", true));
+            this.textBox1.Location = new System.Drawing.Point(210, 419);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(279, 26);
+            this.textBox1.TabIndex = 49;
+            // 
+            // pemesananBindingSource
+            // 
+            this.pemesananBindingSource.DataMember = "Pemesanan";
+            this.pemesananBindingSource.DataSource = this.projectAkhirPABDDataSet1;
+            // 
+            // projectAkhirPABDDataSet1
+            // 
+            this.projectAkhirPABDDataSet1.DataSetName = "ProjectAkhirPABDDataSet";
+            this.projectAkhirPABDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(178, 422);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 20);
+            this.label12.TabIndex = 48;
+            this.label12.Text = ":";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(31, 422);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.TabIndex = 47;
+            this.label18.Text = "No Telpon";
             // 
             // checkBox1
             // 
@@ -382,33 +419,6 @@ namespace TugasAkhir_PABD
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pemesananBindingSource, "noTelp", true));
-            this.textBox1.Location = new System.Drawing.Point(210, 419);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 26);
-            this.textBox1.TabIndex = 49;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(178, 422);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 20);
-            this.label12.TabIndex = 48;
-            this.label12.Text = ":";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(31, 422);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 20);
-            this.label18.TabIndex = 47;
-            this.label18.Text = "No Telpon";
-            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -479,6 +489,7 @@ namespace TugasAkhir_PABD
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.BindingSource = this.pemesananBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -503,16 +514,6 @@ namespace TugasAkhir_PABD
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // projectAkhirPABDDataSet1
-            // 
-            this.projectAkhirPABDDataSet1.DataSetName = "ProjectAkhirPABDDataSet";
-            this.projectAkhirPABDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pemesananBindingSource
-            // 
-            this.pemesananBindingSource.DataMember = "Pemesanan";
-            this.pemesananBindingSource.DataSource = this.projectAkhirPABDDataSet1;
-            // 
             // pemesananTableAdapter1
             // 
             this.pemesananTableAdapter1.ClearBeforeFill = true;
@@ -530,11 +531,11 @@ namespace TugasAkhir_PABD
             this.Load += new System.EventHandler(this.ViewPemesananAdmin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectAkhirPABDDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
