@@ -16,7 +16,7 @@ namespace TugasAkhir_PABD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuAdmin());
+            Application.Run(new Form1());
         }
     }
 }
